@@ -6,15 +6,18 @@
 for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
 	document.querySelectorAll(".drum")[i].addEventListener("click", function () {
 		//initialise Object
-		let buttonInnerHtml = this.innerHTML;
+		let buttonInnerHtml = this.innerHTML; //trigger the element
 
 		makeSound(buttonInnerHtml);
+
+		animation(buttonInnerHtml);
 	});
 }
-
 //detecting keyboard press
-addEventListener("keydown", function (pressed) {
+addEventListener("keydown", (pressed) => {
 	makeSound(pressed.key);
+
+	animation(pressed.key);
 });
 
 function makeSound(key) {
@@ -50,4 +53,12 @@ function makeSound(key) {
 		default:
 			console.log(buttonInnerHtml);
 	}
+}
+
+function animation(currentkey) {
+	let appliedAnimation = document.querySelector("." + currentkey);
+	appliedAnimation.classList.add("pressed");
+	setTimeout(() => {
+		appliedAnimation.classList.remove("pressed");
+	}, 200);
 }

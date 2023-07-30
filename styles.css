@@ -94,6 +94,8 @@ footer {
 .sub {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
 	font-size: 20px;
 	color: bisque;
 	font-family: "Roboto";
