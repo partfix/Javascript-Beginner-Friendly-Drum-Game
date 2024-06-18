@@ -1,5 +1,3 @@
-<h1>Drum Game 🥁</h1>
+## Drum game
 
-<p>A simple web that produce drum sound everytime you click on it</p>
-
-
+ <p>Javascript beginner Friendly project.</p>
